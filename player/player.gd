@@ -23,5 +23,8 @@ func _physics_process(delta):
 		
 	if !is_on_floor():
 		velocity.y += gravity
-	 
+		
+	if position.y > 900:
+		get_tree().change_scene_to_file("res://scenes/retry.tscn")
+		
 	move_and_slide()

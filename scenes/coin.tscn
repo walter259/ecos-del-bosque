@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cac21s0ij7kut" path="res://scripts/coin.gd" id="1_i64fm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4dvvg"]
-radius = 15.0
+radius = 16.0312
 
 [sub_resource type="Animation" id="Animation_rnjyy"]
 resource_name = "coin"
