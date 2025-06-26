@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cv4xqaimu36fu"]
+[gd_scene load_steps=22 format=3 uid="uid://cv4xqaimu36fu"]
 
 [ext_resource type="PackedScene" uid="uid://bck3yfsd1gy8i" path="res://player/player.tscn" id="1_jm1iu"]
 [ext_resource type="Texture2D" uid="uid://shaco3pkq5wt" path="res://assets/Tileset Minigame 2/DarkHouseTiles.png" id="2_pbc48"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cbl8qpcet8vtv" path="res://assets/Tileset Minigame 2/20.png" id="7_guvtl"]
 [ext_resource type="Texture2D" uid="uid://cukwcollnqwr7" path="res://assets/Tileset Minigame 2/Box.png" id="8_igmy8"]
 [ext_resource type="AudioStream" uid="uid://bsx2pu13i8npe" path="res://assets/Music/Minigame_2.ogg" id="12_172wr"]
+[ext_resource type="PackedScene" uid="uid://dmukj5yxbffqr" path="res://scenes/coin.tscn" id="13_g2hoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqxsl"]
 texture = ExtResource("2_pbc48")
@@ -301,3 +302,30 @@ texture = ExtResource("5_ne2mo")
 stream = ExtResource("12_172wr")
 volume_db = -12.623
 autoplay = true
+
+[node name="Coin" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(276, 109)
+
+[node name="Coin2" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(358, 110)
+
+[node name="Coin3" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(584, 109)
+
+[node name="Coin4" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(502, 111)
+
+[node name="Coin5" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(678, 111)
+
+[node name="Coin6" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(896, 91)
+
+[node name="Coin7" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(976, 88)
+
+[node name="Coin8" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(1074, 108)
+
+[node name="Coin9" parent="." instance=ExtResource("13_g2hoc")]
+position = Vector2(815, 93)
