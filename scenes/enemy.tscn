@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://br77we2rn6pwh"]
+[gd_scene load_steps=8 format=3 uid="uid://br77we2rn6pwh"]
 
 [ext_resource type="Script" uid="uid://dahe75d62ufrw" path="res://scripts/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://w28qm3qes1d8" path="res://assets/Enemy/wolf_gray_full.png" id="2_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
 size = Vector2(24, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(28, 22)
 
 [sub_resource type="Animation" id="Animation_c4w8v"]
 resource_name = "run"
@@ -58,6 +61,12 @@ shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="GroundDetector" type="RayCast2D" parent="."]
 target_position = Vector2(-55, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

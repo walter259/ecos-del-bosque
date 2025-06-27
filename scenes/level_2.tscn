@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cv4xqaimu36fu"]
+[gd_scene load_steps=23 format=3 uid="uid://cv4xqaimu36fu"]
 
 [ext_resource type="PackedScene" uid="uid://bck3yfsd1gy8i" path="res://player/player.tscn" id="1_jm1iu"]
 [ext_resource type="Texture2D" uid="uid://shaco3pkq5wt" path="res://assets/Tileset Minigame 2/DarkHouseTiles.png" id="2_pbc48"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cukwcollnqwr7" path="res://assets/Tileset Minigame 2/Box.png" id="8_igmy8"]
 [ext_resource type="AudioStream" uid="uid://bsx2pu13i8npe" path="res://assets/Music/Minigame_2.ogg" id="12_172wr"]
 [ext_resource type="PackedScene" uid="uid://dmukj5yxbffqr" path="res://scenes/coin.tscn" id="13_g2hoc"]
+[ext_resource type="PackedScene" uid="uid://br77we2rn6pwh" path="res://scenes/enemy.tscn" id="14_fldb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqxsl"]
 texture = ExtResource("2_pbc48")
@@ -329,3 +330,12 @@ position = Vector2(1074, 108)
 
 [node name="Coin9" parent="." instance=ExtResource("13_g2hoc")]
 position = Vector2(815, 93)
+
+[node name="Enemy" parent="." instance=ExtResource("14_fldb1")]
+position = Vector2(-9, 114)
+
+[node name="Enemy2" parent="." instance=ExtResource("14_fldb1")]
+position = Vector2(301, 109)
+
+[node name="Enemy3" parent="." instance=ExtResource("14_fldb1")]
+position = Vector2(26, 115)
