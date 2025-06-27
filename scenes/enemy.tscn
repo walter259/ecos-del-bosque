@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://br77we2rn6pwh"]
+
+[ext_resource type="Script" uid="uid://dahe75d62ufrw" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://w28qm3qes1d8" path="res://assets/Enemy/wolf_gray_full.png" id="2_4ra3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(24, 19)
+
+[sub_resource type="Animation" id="Animation_c4w8v"]
+resource_name = "run"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.3, 0.433333, 0.6, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 5]
+}
+
+[sub_resource type="Animation" id="Animation_xwavj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nenq2"]
+_data = {
+&"RESET": SubResource("Animation_xwavj"),
+&"run": SubResource("Animation_c4w8v")
+}
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4ra3w")
+hframes = 6
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_5uy6h")
+
+[node name="GroundDetector" type="RayCast2D" parent="."]
+target_position = Vector2(-55, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nenq2")
+}
+autoplay = "run"

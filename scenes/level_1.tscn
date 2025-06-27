@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxdn4w0qxaaho"]
+[gd_scene load_steps=11 format=3 uid="uid://dxdn4w0qxaaho"]
 
 [ext_resource type="PackedScene" uid="uid://bck3yfsd1gy8i" path="res://player/player.tscn" id="1_014kd"]
 [ext_resource type="Texture2D" uid="uid://c5kbodspnq0oi" path="res://assets/Tileset_Minigame1.png" id="2_bswci"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://caj2hb6njr0yl" path="res://assets/Parallax Minigame 1/[CelesteHa]ForestP-middle.png" id="5_pa8r4"]
 [ext_resource type="AudioStream" uid="uid://cy3f2dxjx35lr" path="res://assets/Music/Minigame_1.ogg" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://dmukj5yxbffqr" path="res://scenes/coin.tscn" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://br77we2rn6pwh" path="res://scenes/enemy.tscn" id="8_15mv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
 texture = ExtResource("2_bswci")
@@ -112,3 +113,15 @@ position = Vector2(487, 82)
 
 [node name="Coin5" parent="." instance=ExtResource("7_pa8r4")]
 position = Vector2(1272, 88)
+
+[node name="Enemy" parent="." instance=ExtResource("8_15mv3")]
+position = Vector2(387, 116)
+
+[node name="Enemy2" parent="." instance=ExtResource("8_15mv3")]
+position = Vector2(911, 117)
+
+[node name="Enemy3" parent="." instance=ExtResource("8_15mv3")]
+position = Vector2(551, 118)
+
+[node name="Enemy4" parent="." instance=ExtResource("8_15mv3")]
+position = Vector2(1280, 118)
